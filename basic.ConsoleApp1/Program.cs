@@ -8,11 +8,12 @@ namespace basic.ConsoleApp1 {
         static void Main() {
 
 
-            Console.WriteLine("Hello from basic.ConsoleApp1");
+            int num = 0;
+
+            Console.WriteLine(num);
 
             Payroll payroll = new Payroll();
 
-            Toyota toyota = new Toyota();
 
 
 
