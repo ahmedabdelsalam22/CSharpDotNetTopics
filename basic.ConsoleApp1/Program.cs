@@ -11,18 +11,11 @@ namespace basic.ConsoleApp1
 
             Rectangle r = new Rectangle();
 
-            r.Acceptdetails();
-            r.Display();
 
-            //To get the exact size of a type or a variable on a particular platform
 
-            Console.WriteLine("Size of int: {0}", sizeof(int));
 
-            Console.WriteLine("Size of int: {0}", sizeof(float));
 
-            Console.WriteLine("Size of int: {0}", sizeof(double));
 
-            Console.WriteLine("Size of int: {0}", sizeof(char));
 
 
 
