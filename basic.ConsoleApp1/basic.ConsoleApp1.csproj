@@ -7,9 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\basic.Auto\basic.Auto.csproj" />
-    <ProjectReference Include="..\basic.HR\basic.HR.csproj" />
-  </ItemGroup>
-
 </Project>
