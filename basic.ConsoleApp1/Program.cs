@@ -9,40 +9,49 @@ namespace basic.ConsoleApp1
         static void Main()
         {
 
-            Rectangle r = new Rectangle();
-            r.Acceptdetails();
-            r.Display();
+            //Rectangle r = new Rectangle();
+            //r.Acceptdetails();
+            //r.Display();
 
-           // To get the exact size of a type or a variable on a particular platform
-            Console.WriteLine("Size of int: {0}", sizeof(int));
-            Console.WriteLine("Size of int: {0}", sizeof(float));
-            Console.WriteLine("Size of int: {0}", sizeof(double));
-            Console.WriteLine("Size of int: {0}", sizeof(char));
+            // To get the exact size of a type or a variable on a particular platform
+            //Console.WriteLine("Size of int: {0}", sizeof(int));
+            //Console.WriteLine("Size of int: {0}", sizeof(float));
+            //Console.WriteLine("Size of int: {0}", sizeof(double));
+            //Console.WriteLine("Size of int: {0}", sizeof(char));
 
-           // Object Type
-            object obj;
-            obj = 15;
-            Console.WriteLine(obj);
+            // Object Type
+            //object obj;
+            //obj = 15;
+            //Console.WriteLine(obj);
 
 
             // var VS dynamic
-            var name = "Ahmed";
-            Console.WriteLine(name);
+            //var name = "Ahmed";
+            //Console.WriteLine(name);
 
             // dynamic
-            dynamic num = 15;
-            Console.WriteLine(num);
-            num = "Mohamed";
-            Console.WriteLine(num);
+            //dynamic num = 15;
+            //Console.WriteLine(num);
+            //num = "Mohamed";
+            //Console.WriteLine(num);
 
 
             // Type conversion :- type casting 
+            //double d = 5673.74;
+            //int i =  (int)d; // convert d (double) to i (int)
+            //Console.WriteLine(d);
+            //Console.WriteLine(i);
 
-            double d = 5673.74;
-            int i =  (int)d; // convert d (double) to i (int)
+            // Type conversion :- type casting 
+                //int i = 75;
+                //float f = 53.005f;
+                //double d = 2345.7652;
+                //bool b = true;
+                //Console.WriteLine(i.ToString());
+                //Console.WriteLine(f.ToString());
+                //Console.WriteLine(d.ToString());
+                //Console.WriteLine(b.ToString());
 
-            Console.WriteLine(d);
-            Console.WriteLine(i);
 
 
 
