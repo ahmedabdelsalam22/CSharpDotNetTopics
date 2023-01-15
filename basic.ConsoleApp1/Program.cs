@@ -9,31 +9,31 @@ namespace basic.ConsoleApp1
         static void Main()
         {
 
-            //Rectangle r = new Rectangle();
-            //r.Acceptdetails();
-            //r.Display();
+            Rectangle r = new Rectangle();
+            r.Acceptdetails();
+            r.Display();
 
-            //To get the exact size of a type or a variable on a particular platform
-            //Console.WriteLine("Size of int: {0}", sizeof(int));
-            //Console.WriteLine("Size of int: {0}", sizeof(float));
-            //Console.WriteLine("Size of int: {0}", sizeof(double));
-            //Console.WriteLine("Size of int: {0}", sizeof(char));
+           // To get the exact size of a type or a variable on a particular platform
+            Console.WriteLine("Size of int: {0}", sizeof(int));
+            Console.WriteLine("Size of int: {0}", sizeof(float));
+            Console.WriteLine("Size of int: {0}", sizeof(double));
+            Console.WriteLine("Size of int: {0}", sizeof(char));
 
-            //Object Type
-            //object obj;
-            //obj = 15;
-            //Console.WriteLine(obj);
+           // Object Type
+            object obj;
+            obj = 15;
+            Console.WriteLine(obj);
 
 
-            // var VS dynamic 
-            // var Type
-            //var name = "Ahmed";
-            //Console.WriteLine(name);
-            // Dynamic Type
-            //dynamic num = 15; 
-            //Console.WriteLine(num);
-            //num = "Mohamed";
-            //Console.WriteLine(num);
+            // var VS dynamic
+            var name = "Ahmed";
+            Console.WriteLine(name);
+
+            // dynamic
+            dynamic num = 15;
+            Console.WriteLine(num);
+            num = "Mohamed";
+            Console.WriteLine(num);
 
 
             // Type conversion :- type casting 
