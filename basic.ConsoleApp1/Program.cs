@@ -22,7 +22,6 @@ namespace basic.ConsoleApp1
 
         }
 
-
         class Rectangle
         {
 
