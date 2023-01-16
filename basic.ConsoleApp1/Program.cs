@@ -92,11 +92,22 @@ namespace basic.ConsoleApp1
             //Console.WriteLine(marks[2]);
 
             //// You can copy an array variable into another target array variable
-            int[] score = marks;
+            // int[] score = marks;
 
-            Console.WriteLine(score[0]);
-            Console.WriteLine(score[1]);
-            Console.WriteLine(score[2]);
+            //Console.WriteLine(score[0]);
+            //Console.WriteLine(score[1]);
+            //Console.WriteLine(score[2]);
+
+
+            //// You can copy an array variable into another target array variable
+
+            for (int i=0; i<marks.Length; i++) 
+            {
+                Console.WriteLine("marks[{0}] = {1}" , i, marks[i]);
+            }
+
+
+
 
 
 
