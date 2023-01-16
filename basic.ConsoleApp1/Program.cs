@@ -1,5 +1,6 @@
 ﻿
 
+using System;
 using System.Reflection.Metadata;
 
 namespace basic.ConsoleApp1
@@ -85,7 +86,7 @@ namespace basic.ConsoleApp1
 
 
             //// You can also create and initialize an array, as shown 
-            int[] marks = new int[] {5,8,14} ;
+            //int[] marks = new int[] {5,8,14} ;
 
             //Console.WriteLine(marks[0]);
             //Console.WriteLine(marks[1]);
@@ -99,12 +100,36 @@ namespace basic.ConsoleApp1
             //Console.WriteLine(score[2]);
 
 
-            //// You can copy an array variable into another target array variable
+            //// display array with for loop
 
-            for (int i=0; i<marks.Length; i++) 
-            {
-                Console.WriteLine("marks[{0}] = {1}" , i, marks[i]);
+            //for (int i=0; i<marks.Length; i++) 
+            //{
+            //    Console.WriteLine("marks[{0}] = {1}" , i, marks[i]);
+            //}
+
+            //// intialize array with for loop
+
+            int[] grade = new int[5];
+
+            for (int i=0; i<grade.Length; i++) {
+
+                Console.WriteLine("Enter array number with index {0}", i);
+                int num = Convert.ToInt32(Console.ReadLine());
+                grade[i] = num;
+
             }
+
+            Console.WriteLine("***********************");
+
+            for (int i = 0; i < grade.Length; i++)
+            {
+                Console.WriteLine("marks[{0}] = {1}", i, grade[i]);
+            }
+
+
+
+
+
 
 
 
