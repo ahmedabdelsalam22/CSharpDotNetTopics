@@ -1,5 +1,7 @@
 ﻿
 
+using System.Reflection.Metadata;
+
 namespace basic.ConsoleApp1
 {
 
@@ -60,8 +62,34 @@ namespace basic.ConsoleApp1
             //Console.WriteLine("your number is equal "+num);
 
 
-            // Defining Constants
-            // how to get areaCircle  
+            //// Defining Constants
+            //// how to get areaCircle  
+            //const double pi = 3.14;
+            //double r;
+            //Console.WriteLine("Please, Enter Radius: ");
+            //r = Convert.ToDouble(Console.ReadLine());
+            //double areaCircle = pi * r * r;
+            //Console.WriteLine("Radius: {0}, Area: {1}", r, areaCircle);
+
+
+            //// Declation array ////Initializing an Array during the declaration.
+            //double[] balance = {15000.0 , 18000.0 , 22000.0};          
+            //// Assigning Values to an Array 
+            //balance[0] = 12000.0;
+            //balance[1] = 17000.0;
+            //balance[2] = 22000.0;
+            //// display array
+            //Console.WriteLine(balance[0]);
+            //Console.WriteLine(balance[1]);
+            //Console.WriteLine(balance[2]);
+
+
+            //// You can also create and initialize an array, as shown 
+            int[] marks = new int[3] {5,8,14} ;
+
+            Console.WriteLine(marks[0]);
+            Console.WriteLine(marks[1]);
+            Console.WriteLine(marks[2]);
 
 
 
