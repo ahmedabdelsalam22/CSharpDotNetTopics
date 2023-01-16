@@ -13,36 +13,36 @@ namespace basic.ConsoleApp1
             //r.Acceptdetails();
             //r.Display();
 
-            // To get the exact size of a type or a variable on a particular platform
+            //// To get the exact size of a type or a variable on a particular platform
             //Console.WriteLine("Size of int: {0}", sizeof(int));
             //Console.WriteLine("Size of int: {0}", sizeof(float));
             //Console.WriteLine("Size of int: {0}", sizeof(double));
             //Console.WriteLine("Size of int: {0}", sizeof(char));
 
-            // Object Type
+            //// Object Type
             //object obj;
             //obj = 15;
             //Console.WriteLine(obj);
 
 
-            // var VS dynamic
+            //// var VS dynamic
             //var name = "Ahmed";
             //Console.WriteLine(name);
 
-            // dynamic
+            //// dynamic
             //dynamic num = 15;
             //Console.WriteLine(num);
             //num = "Mohamed";
             //Console.WriteLine(num);
 
 
-            // Type conversion :- type casting 
+            //// Type conversion :- type casting 
             //double d = 5673.74;
             //int i =  (int)d; // convert d (double) to i (int)
             //Console.WriteLine(d);
             //Console.WriteLine(i);
 
-            // Type conversion :- type casting 
+            //// Type conversion :- type casting 
             //int i = 75;
             //float f = 53.005f;
             //double d = 2345.7652;
@@ -53,44 +53,52 @@ namespace basic.ConsoleApp1
             //Console.WriteLine(b.ToString());
 
 
-            // Accepting Values from User
+            //// Accepting Values from User
+            //Console.WriteLine("Hi,Enter Your num");
+            //int num;
+            //num = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("your number is equal "+num);
 
-            Console.WriteLine("Hi,Enter Your num");
 
-            int num;
-            num = Convert.ToInt32(Console.ReadLine());
+            // Defining Constants
+            // how to get areaCircle  
 
-            Console.WriteLine("your number is equal "+num);
-
+            const double pi = 3.14;
+            double r;
+            Console.WriteLine("Please, Enter Radius: ");
+            r = Convert.ToDouble(Console.ReadLine());
+            double areaCircle = pi * r * r;
+            Console.WriteLine("Radius: {0}, Area: {1}", r, areaCircle);
 
 
 
         }
 
-        class Rectangle
-        {
 
-            // member variables
-            double length;
-            double width;
+        //class Rectangle
+        //{
 
-            // evaluation length and width
-            public void Acceptdetails()
-            {
-                length = 4.5;
-                width = 3.5;
-            }
-            public double GetArea()
-            {
-                return length * width;
-            }
-            public void Display()
-            {
-                Console.WriteLine("Length: {0}", length);
-                Console.WriteLine("Width: {0}", width);
-                Console.WriteLine("Area: {0}", GetArea());
-            }
-        }
+        //    // member variables
+        //    double length;
+        //    double width;
+
+        //    // evaluation length and width
+        //    public void Acceptdetails()
+        //    {
+        //        length = 4.5;
+        //        width = 3.5;
+        //    }
+        //    public double GetArea()
+        //    {
+        //        return length * width;
+        //    }
+        //    public void Display()
+        //    {
+        //        Console.WriteLine("Length: {0}", length);
+        //        Console.WriteLine("Width: {0}", width);
+        //        Console.WriteLine("Area: {0}", GetArea());
+        //    }
+        //}
 
 
 
