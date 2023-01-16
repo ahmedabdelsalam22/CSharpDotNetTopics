@@ -133,7 +133,6 @@ namespace basic.ConsoleApp1
             r1.length= 10;
             r1.width=15;
 
-            Console.WriteLine(r1.getArea());
 
 
 
@@ -141,7 +140,6 @@ namespace basic.ConsoleApp1
 
 
 
-        class Rectangle {
 
             public double length;
             public double width;
