@@ -85,12 +85,18 @@ namespace basic.ConsoleApp1
 
 
             //// You can also create and initialize an array, as shown 
-            int[] marks = new int[3] {5,8,14} ;
+            int[] marks = new int[] {5,8,14} ;
 
-            Console.WriteLine(marks[0]);
-            Console.WriteLine(marks[1]);
-            Console.WriteLine(marks[2]);
+            //Console.WriteLine(marks[0]);
+            //Console.WriteLine(marks[1]);
+            //Console.WriteLine(marks[2]);
 
+            //// You can copy an array variable into another target array variable
+            int[] score = marks;
+
+            Console.WriteLine(score[0]);
+            Console.WriteLine(score[1]);
+            Console.WriteLine(score[2]);
 
 
 
