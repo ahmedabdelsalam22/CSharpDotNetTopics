@@ -107,36 +107,53 @@ namespace basic.ConsoleApp1
             //    Console.WriteLine("marks[{0}] = {1}" , i, marks[i]);
             //}
 
+
+
             //// intialize array with for loop
-
-            int[] grade = new int[5];
-
-            for (int i=0; i<grade.Length; i++) {
-
-                Console.WriteLine("Enter array number with index {0}", i);
-                int num = Convert.ToInt32(Console.ReadLine());
-                grade[i] = num;
-
-            }
-
-            Console.WriteLine("***********************");
-
-            for (int i = 0; i < grade.Length; i++)
-            {
-                Console.WriteLine("marks[{0}] = {1}", i, grade[i]);
-            }
+            //int[] grade = new int[5];
+            //for (int i=0; i<grade.Length; i++) {
+            //    Console.WriteLine("Enter array number with index {0}", i);
+            //    int num = Convert.ToInt32(Console.ReadLine());
+            //    grade[i] = num;
+            //}
+            //Console.WriteLine("***********************");
+            ////// display array after insert items in it 
+            //for (int i = 0; i < grade.Length; i++)
+            //{
+            //    Console.WriteLine("marks[{0}] = {1}", i, grade[i]);
+            //}
 
 
 
+            /////Encapsulation
+            ///// Public Access Specifier
 
+            Rectangle r1 = new Rectangle();
 
+            r1.length= 10;
+            r1.width=15;
 
-
-
+            Console.WriteLine(r1.getArea());
 
 
 
         }
+
+
+
+        class Rectangle {
+
+            public double length;
+            public double width;
+
+            public double getArea() {
+                return length * width;
+            } 
+
+
+        }
+
+
 
 
         //class Rectangle
@@ -163,6 +180,7 @@ namespace basic.ConsoleApp1
         //        Console.WriteLine("Area: {0}", GetArea());
         //    }
         //}
+
 
 
 
