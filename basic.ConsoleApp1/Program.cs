@@ -43,15 +43,24 @@ namespace basic.ConsoleApp1
             //Console.WriteLine(i);
 
             // Type conversion :- type casting 
-                //int i = 75;
-                //float f = 53.005f;
-                //double d = 2345.7652;
-                //bool b = true;
-                //Console.WriteLine(i.ToString());
-                //Console.WriteLine(f.ToString());
-                //Console.WriteLine(d.ToString());
-                //Console.WriteLine(b.ToString());
+            //int i = 75;
+            //float f = 53.005f;
+            //double d = 2345.7652;
+            //bool b = true;
+            //Console.WriteLine(i.ToString());
+            //Console.WriteLine(f.ToString());
+            //Console.WriteLine(d.ToString());
+            //Console.WriteLine(b.ToString());
 
+
+            // Accepting Values from User
+
+            Console.WriteLine("Hi,Enter Your num");
+
+            int num;
+            num = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("your number is equal "+num);
 
 
 
