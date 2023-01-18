@@ -130,8 +130,6 @@ namespace basic.ConsoleApp1
 
             Rectangle r1 = new Rectangle();
 
-            r1.length= 10;
-            r1.width=15;
 
 
 
@@ -150,7 +148,6 @@ namespace basic.ConsoleApp1
 
 
         }
-
 
 
 
@@ -182,6 +179,5 @@ namespace basic.ConsoleApp1
 
 
 
-    }
 
 }
