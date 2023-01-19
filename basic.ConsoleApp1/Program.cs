@@ -514,6 +514,20 @@ namespace basic.ConsoleApp1
         public double length;   // Length of a box
         public double breadth;  // Breadth of a box
         public double height;   // Height of a box
+
+        public void setLength(double len)
+        {
+            length = len;
+        }
+        public void setBreadth(double bre)
+        {
+            breadth = bre;
+        }
+        public void setHeight(double hei)
+        {
+            height = hei;
+        }
+
     }
 
 
