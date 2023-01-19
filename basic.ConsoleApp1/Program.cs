@@ -163,16 +163,23 @@ namespace basic.ConsoleApp1
             //string chat = String.Format("Message sent at {0:t} on {0:D}", waiting);
             //Console.WriteLine("Message: {0}", chat);
 
-            string str1 = "This is test";
-            string str2 = "This is text";
+            //string str1 = "This is text";
+            //string str2 = "This is text";
 
-            if (String.Compare(str1, str2) == 0)
+            //if (String.Compare(str1, str2) == 0)
+            //{
+            //    Console.WriteLine(str1 + " and " + str2 + " are equal.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine(str1 + " and " + str2 + " are not equal.");
+            //}
+
+            string str = "This is test";
+
+            if (str.Contains("test"))
             {
-                Console.WriteLine(str1 + " and " + str2 + " are equal.");
-            }
-            else
-            {
-                Console.WriteLine(str1 + " and " + str2 + " are not equal.");
+                Console.WriteLine("The sequence 'test' was found.");
             }
 
 
