@@ -542,9 +542,6 @@ namespace basic.ConsoleApp1
             height = hei;
         }
 
-        public double getVolume()
-        {
-            return length * breadth * height;
         }
 
     }
