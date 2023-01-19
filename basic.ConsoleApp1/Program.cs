@@ -236,6 +236,13 @@ namespace basic.ConsoleApp1
             /* print Book1 info */
             Book1.display();
 
+            /* book 2 specification */
+            Book2.getValues("Telecom Billing",
+            "Zara Ali", "Telecom Billing Tutorial", 6495700);
+
+            /* print Book2 info */
+            Book2.display();
+
         }
 
 
