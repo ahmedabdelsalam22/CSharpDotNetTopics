@@ -175,13 +175,17 @@ namespace basic.ConsoleApp1
             //    Console.WriteLine(str1 + " and " + str2 + " are not equal.");
             //}
 
-            string str = "This is test";
+            //string str = "This is test";
 
-            if (str.Contains("test"))
-            {
-                Console.WriteLine("The sequence 'test' was found.");
-            }
+            //if (str.Contains("test"))
+            //{
+            //    Console.WriteLine("The sequence 'test' was found.");
+            //}
 
+            string str = "Last night I dreamt of San Pedro";
+            Console.WriteLine(str);
+            string substr = str.Substring(23);
+            Console.WriteLine(substr);
 
         }
 
