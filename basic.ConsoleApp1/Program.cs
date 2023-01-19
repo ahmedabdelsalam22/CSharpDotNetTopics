@@ -238,6 +238,15 @@ namespace basic.ConsoleApp1
             public string subject;
             public int book_id;
 
+
+            public void getValues(string t, string a, string s, int id)
+            {
+                title = t;
+                author = a;
+                subject = s;
+                book_id = id;
+            }
+
         }
 
 
