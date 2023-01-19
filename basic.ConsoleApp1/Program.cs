@@ -182,9 +182,34 @@ namespace basic.ConsoleApp1
             //    Console.WriteLine("The sequence 'test' was found.");
             //}
 
-            string str = "Last night I dreamt of San Pedro";
-            Console.WriteLine(str);
+            //string str = "Last night I dreamt of San Pedro";
+            //Console.WriteLine(str);
+            //string substr = str.Substring(23);
+            //Console.WriteLine(substr);
 
+            //string[] starray = new string[]{"Down the way nights are dark",
+            //"And the sun shines daily on the mountain top",
+            //"I took a trip on a sailing ship",
+            //"And when I reached Jamaica",
+            //"I made a stop"};
+
+            //string str = String.Join("\n", starray);
+            //Console.WriteLine(str);
+
+            
+      
+
+        }
+
+
+
+
+        // struct 
+
+        struct Books { 
+        
+
+        
         }
 
 
