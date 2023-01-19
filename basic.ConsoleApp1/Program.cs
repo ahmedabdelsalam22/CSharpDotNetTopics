@@ -2,6 +2,8 @@
 
 using System;
 using System.Reflection.Metadata;
+using System.Transactions;
+using System.Xml.Linq;
 
 namespace basic.ConsoleApp1
 {
@@ -11,6 +13,7 @@ namespace basic.ConsoleApp1
 
         static void Main()
         {
+
 
             //Rectangle r = new Rectangle();
             //r.Acceptdetails();
@@ -126,26 +129,78 @@ namespace basic.ConsoleApp1
 
 
             /////Encapsulation
+
             ///// Public Access Specifier
+            //Rectangle r1 = new Rectangle();
+            //r1.length= 10;
+            //r1.width=15;
+            //Console.WriteLine(r1.getArea());
+
+            ///// private Access Specifier
+            // Rectangle r1 = new Rectangle();
+            //r1.getArea();
 
 
+            //string firtsName, lastName;
+            //firtsName = "Rowan ";
+            //lastName = "Atkinson";
 
+            //string fullname = firtsName + lastName;
+            //Console.WriteLine("Full Name: {0}", fullname);
 
+            //char[] letters = { 'H', 'e', 'l', 'l', 'o' };            
+            //////by using string constructor { 'H', 'e', 'l', 'l','o' };
+            //string greetings = new string(letters);
+            //Console.WriteLine("Greetings: {0}", greetings);
 
+            ////methods returning string { "Hello", "From", "Tutorials", "Point" };
+            //string[] greeting = { "Hello", "From", "Tutorials", "Point" };
+            //string message = String.Join(" ", greeting);
+            //Console.WriteLine("Message: {0}", message);
 
-
-
-
-
-            public double length;
-            public double width;
-
-            public double getArea() {
-                return length * width;
-            } 
+            ////formatting method to convert a value
+            DateTime waiting = new DateTime(2012, 10, 10, 17, 58, 1);
+            string chat = String.Format("Message sent at {0:t} on {0:D}", waiting);
+            Console.WriteLine("Message: {0}", chat);
 
 
         }
+
+
+
+
+        //// public access Specifier
+        //class Rectangle {
+        //    public double length;
+        //    public double width;
+
+        //    public double getArea() {
+        //        return length * width;
+        //    } 
+        //}
+
+
+
+
+        //class Rectangle
+        //{
+
+        //    private double length;
+        //    private double width;
+
+        //    public void getArea()
+        //    {
+        //        Console.WriteLine("Enter Rectangle Length");
+        //        length = Convert.ToDouble(Console.ReadLine());
+        //        Console.WriteLine("Enter Rectangle Width");
+        //        width = Convert.ToDouble(Console.ReadLine());
+
+        //        double area = length * width;
+        //        Console.WriteLine("Rectanlge area is equal " + area);
+        //    }
+
+
+        //}
 
 
 
@@ -173,6 +228,15 @@ namespace basic.ConsoleApp1
         //        Console.WriteLine("Area: {0}", GetArea());
         //    }
         //}
+
+
+    }
+
+
+
+
+
+
 
 
 
