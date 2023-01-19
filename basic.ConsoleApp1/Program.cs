@@ -530,7 +530,6 @@ namespace basic.ConsoleApp1
             line.setLength(6.0);
             Console.WriteLine("Length of line : {0}", line.getLength());
 
-
         }
 
     }
