@@ -548,6 +548,12 @@ namespace basic.ConsoleApp1
             Console.WriteLine("Object is being created");
         }
 
+        public Line(double len)
+        {  //Parameterized constructor
+            Console.WriteLine("Object is being created, length = {0}", len);
+            length = len;
+        }
+
         public void setLength(double len)
         {
             length = len;
