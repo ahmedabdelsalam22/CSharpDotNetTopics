@@ -128,13 +128,11 @@ namespace basic.ConsoleApp1
             /////Encapsulation
             ///// Public Access Specifier
 
-            Rectangle r1 = new Rectangle();
 
 
 
 
 
-        }
 
 
 
