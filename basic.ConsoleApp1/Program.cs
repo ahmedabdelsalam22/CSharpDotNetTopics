@@ -249,7 +249,6 @@ namespace basic.ConsoleApp1
 
 
 
-
         // struct 
 
         //struct Books {
