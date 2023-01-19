@@ -527,6 +527,9 @@ namespace basic.ConsoleApp1
 
             Line line = new Line();
 
+            line.setLength(6.0);
+            Console.WriteLine("Length of line : {0}", line.getLength());
+
 
         }
 
