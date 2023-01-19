@@ -228,6 +228,14 @@ namespace basic.ConsoleApp1
             Books Book1 = new Books();   /* Declare Book1 of type Book */
             Books Book2 = new Books();   /* Declare Book2 of type Book */
 
+            /* book 1 specification */
+            Book1.getValues("C Programming",
+            "Nuha Ali", "C Programming Tutorial", 6495407);
+
+
+            /* print Book1 info */
+            Book1.display();
+
         }
 
 
