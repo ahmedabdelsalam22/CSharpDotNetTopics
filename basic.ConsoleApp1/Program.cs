@@ -535,27 +535,27 @@ namespace basic.ConsoleApp1
 
             //  Line line = new Line();
 
-            StaticVar s1 = new StaticVar();
-            StaticVar s2 = new StaticVar();
+            //StaticVar s1 = new StaticVar();
+            //StaticVar s2 = new StaticVar();
 
-            s1.count();
-            s1.count();
-            s1.count();
+            //s1.count();
+            //s1.count();
+            //s1.count();
 
-            s1.count();
-            s1.count();
-            s1.count();
+            //s1.count();
+            //s1.count();
+            //s1.count();
 
 
-            //Console.WriteLine("Variable num for s1: {0}", s1.getNum());
-            //Console.WriteLine("Variable num for s2: {0}", s2.getNum());
-            StaticVar s = new StaticVar();
+            ////Console.WriteLine("Variable num for s1: {0}", s1.getNum());
+            ////Console.WriteLine("Variable num for s2: {0}", s2.getNum());
+            //StaticVar s = new StaticVar();
 
-            s.count();
-            s.count();
-            s.count();
+            //s.count();
+            //s.count();
+            //s.count();
 
-            Console.WriteLine("Variable num: {0}", StaticVar.getNum());
+            //Console.WriteLine("Variable num: {0}", StaticVar.getNum());
 
         }
 
@@ -563,19 +563,19 @@ namespace basic.ConsoleApp1
 
 
 
-    class StaticVar
-    {
-        public static int num;
+    //class StaticVar
+    //{
+    //    public static int num;
 
-        public void count()
-        {
-            num++;
-        }
-        public static int getNum()
-        {
-            return num;
-        }
-    }
+    //    public void count()
+    //    {
+    //        num++;
+    //    }
+    //    public static int getNum()
+    //    {
+    //        return num;
+    //    }
+    //}
 
     //class Line
     //{
