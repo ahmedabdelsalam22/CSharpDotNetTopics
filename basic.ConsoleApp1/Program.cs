@@ -225,57 +225,59 @@ namespace basic.ConsoleApp1
             //Console.WriteLine("Book 2 book_id : {0}", Book2.book_id);
 
 
-            Books Book1 = new Books();   /* Declare Book1 of type Book */
-            Books Book2 = new Books();   /* Declare Book2 of type Book */
+            //Books Book1 = new Books();   /* Declare Book1 of type Book */
+            //Books Book2 = new Books();   /* Declare Book2 of type Book */
 
-            /* book 1 specification */
-            Book1.getValues("C Programming",
-            "Nuha Ali", "C Programming Tutorial", 6495407);
+            ///* book 1 specification */
+            //Book1.getValues("C Programming",
+            //"Nuha Ali", "C Programming Tutorial", 6495407);
 
 
-            /* print Book1 info */
-            Book1.display();
+            ///* print Book1 info */
+            //Book1.display();
 
-            /* book 2 specification */
-            Book2.getValues("Telecom Billing",
-            "Zara Ali", "Telecom Billing Tutorial", 6495700);
+            ///* book 2 specification */
+            //Book2.getValues("Telecom Billing",
+            //"Zara Ali", "Telecom Billing Tutorial", 6495700);
 
-            /* print Book2 info */
-            Book2.display();
+            ///* print Book2 info */
+            //Book2.display();
 
-        }
+            enum Days { Sun, Mon, tue, Wed, thu, Fri, Sat };
+
+    }
 
 
 
 
         // struct 
 
-        struct Books {
+        //struct Books {
 
-            public string title;
-            public string author;
-            public string subject;
-            public int book_id;
-
-
-            public void getValues(string t, string a, string s, int id)
-            {
-                title = t;
-                author = a;
-                subject = s;
-                book_id = id;
-            }
+        //    public string title;
+        //    public string author;
+        //    public string subject;
+        //    public int book_id;
 
 
-            public void display()
-            {
-                Console.WriteLine("Title : {0}", title);
-                Console.WriteLine("Author : {0}", author);
-                Console.WriteLine("Subject : {0}", subject);
-                Console.WriteLine("Book_id :{0}", book_id);
-            }
+        //    public void getValues(string t, string a, string s, int id)
+        //    {
+        //        title = t;
+        //        author = a;
+        //        subject = s;
+        //        book_id = id;
+        //    }
 
-        }
+
+        //    public void display()
+        //    {
+        //        Console.WriteLine("Title : {0}", title);
+        //        Console.WriteLine("Author : {0}", author);
+        //        Console.WriteLine("Subject : {0}", subject);
+        //        Console.WriteLine("Book_id :{0}", book_id);
+        //    }
+
+        //}
 
 
 
