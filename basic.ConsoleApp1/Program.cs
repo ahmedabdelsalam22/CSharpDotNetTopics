@@ -525,11 +525,30 @@ namespace basic.ConsoleApp1
 
             // set line length
 
-            Line line = new Line();
+            //Line line = new Line();
 
-            line.setLength(6.0);
-            Console.WriteLine("Length of line : {0}", line.getLength());
+            //line.setLength(6.0);
+            //Console.WriteLine("Length of line : {0}", line.getLength());
 
+            //Line line = new Line(10.0);
+            //Console.WriteLine("Length of line : {0}", line.getLength());
+
+            //  Line line = new Line();
+
+            StaticVar s1 = new StaticVar();
+            StaticVar s2 = new StaticVar();
+
+            s1.count();
+            s1.count();
+            s1.count();
+
+            s1.count();
+            s1.count();
+            s1.count();
+       
+
+            Console.WriteLine("Variable num for s1: {0}", s1.getNum());
+            Console.WriteLine("Variable num for s2: {0}", s2.getNum());
 
         }
 
@@ -537,163 +556,180 @@ namespace basic.ConsoleApp1
 
 
 
-
-
-    class Line
+    class StaticVar
     {
-        private double length;
+        public static int num;
 
-        public Line()
+        public void count()
         {
-            Console.WriteLine("Object is being created");
+            num++;
         }
-
-        public Line(double len)
-        {  //Parameterized constructor
-            Console.WriteLine("Object is being created, length = {0}", len);
-            length = len;
-        }
-
-        public void setLength(double len)
+        public int getNum()
         {
-            length = len;
+            return num;
         }
-
-        public double getLength()
-        {
-            return length;
-        }
-
     }
 
-        //class Box
-        //{
-        //    public double length;   // Length of a box
-        //    public double breadth;  // Breadth of a box
-        //    public double height;   // Height of a box
+    //class Line
+    //{
+    //    private double length;
 
-        //    public void setLength(double len)
-        //    {
-        //        length = len;
-        //    }
-        //    public void setBreadth(double bre)
-        //    {
-        //        breadth = bre;
-        //    }
-        //    public void setHeight(double hei)
-        //    {
-        //        height = hei;
-        //    }
+    //    public Line()
+    //    {
+    //        Console.WriteLine("Object is being created");
+    //    }
 
-        //    public double getVolume()
-        //    {
-        //        return length * breadth * height;
-        //    }
+    //    //public Line(double len)
+    //    //{  //Parameterized constructor
+    //    //    Console.WriteLine("Object is being created, length = {0}", len);
+    //    //    length = len;
+    //    //}
 
-        //}
+    //    ~Line()
+    //    {   //destructor
+    //        Console.WriteLine("Object is being deleted");
+    //    }
+
+    //    public void setLength(double len)
+    //    {
+    //        length = len;
+    //    }
+
+    //    public double getLength()
+    //    {
+    //        return length;
+    //    }
+
+    //}
+
+    //class Box
+    //{
+    //    public double length;   // Length of a box
+    //    public double breadth;  // Breadth of a box
+    //    public double height;   // Height of a box
+
+    //    public void setLength(double len)
+    //    {
+    //        length = len;
+    //    }
+    //    public void setBreadth(double bre)
+    //    {
+    //        breadth = bre;
+    //    }
+    //    public void setHeight(double hei)
+    //    {
+    //        height = hei;
+    //    }
+
+    //    public double getVolume()
+    //    {
+    //        return length * breadth * height;
+    //    }
+
+    //}
 
 
-        //enum Days { Sun, Mon, tue, Wed, thu, Fri, Sat };
-
-
-
-
-
-        // struct 
-
-        //struct Books {
-
-        //    public string title;
-        //    public string author;
-        //    public string subject;
-        //    public int book_id;
-
-
-        //    public void getValues(string t, string a, string s, int id)
-        //    {
-        //        title = t;
-        //        author = a;
-        //        subject = s;
-        //        book_id = id;
-        //    }
-
-
-        //    public void display()
-        //    {
-        //        Console.WriteLine("Title : {0}", title);
-        //        Console.WriteLine("Author : {0}", author);
-        //        Console.WriteLine("Subject : {0}", subject);
-        //        Console.WriteLine("Book_id :{0}", book_id);
-        //    }
-
-        //}
-
+    //enum Days { Sun, Mon, tue, Wed, thu, Fri, Sat };
 
 
 
 
-        //// public access Specifier
-        //class Rectangle {
-        //    public double length;
-        //    public double width;
 
-        //    public double getArea() {
-        //        return length * width;
-        //    } 
-        //}
+    // struct 
 
+    //struct Books {
 
+    //    public string title;
+    //    public string author;
+    //    public string subject;
+    //    public int book_id;
 
 
-        //class Rectangle
-        //{
-
-        //    private double length;
-        //    private double width;
-
-        //    public void getArea()
-        //    {
-        //        Console.WriteLine("Enter Rectangle Length");
-        //        length = Convert.ToDouble(Console.ReadLine());
-        //        Console.WriteLine("Enter Rectangle Width");
-        //        width = Convert.ToDouble(Console.ReadLine());
-
-        //        double area = length * width;
-        //        Console.WriteLine("Rectanlge area is equal " + area);
-        //    }
+    //    public void getValues(string t, string a, string s, int id)
+    //    {
+    //        title = t;
+    //        author = a;
+    //        subject = s;
+    //        book_id = id;
+    //    }
 
 
-        //}
+    //    public void display()
+    //    {
+    //        Console.WriteLine("Title : {0}", title);
+    //        Console.WriteLine("Author : {0}", author);
+    //        Console.WriteLine("Subject : {0}", subject);
+    //        Console.WriteLine("Book_id :{0}", book_id);
+    //    }
+
+    //}
 
 
 
-        //class Rectangle
-        //{
-
-        //    // member variables
-        //    double length;
-        //    double width;
-
-        //    // evaluation length and width
-        //    public void Acceptdetails()
-        //    {
-        //        length = 4.5;
-        //        width = 3.5;
-        //    }
-        //    public double GetArea()
-        //    {
-        //        return length * width;
-        //    }
-        //    public void Display()
-        //    {
-        //        Console.WriteLine("Length: {0}", length);
-        //        Console.WriteLine("Width: {0}", width);
-        //        Console.WriteLine("Area: {0}", GetArea());
-        //    }
-        //}
 
 
-    }
+    //// public access Specifier
+    //class Rectangle {
+    //    public double length;
+    //    public double width;
+
+    //    public double getArea() {
+    //        return length * width;
+    //    } 
+    //}
+
+
+
+
+    //class Rectangle
+    //{
+
+    //    private double length;
+    //    private double width;
+
+    //    public void getArea()
+    //    {
+    //        Console.WriteLine("Enter Rectangle Length");
+    //        length = Convert.ToDouble(Console.ReadLine());
+    //        Console.WriteLine("Enter Rectangle Width");
+    //        width = Convert.ToDouble(Console.ReadLine());
+
+    //        double area = length * width;
+    //        Console.WriteLine("Rectanlge area is equal " + area);
+    //    }
+
+
+    //}
+
+
+
+    //class Rectangle
+    //{
+
+    //    // member variables
+    //    double length;
+    //    double width;
+
+    //    // evaluation length and width
+    //    public void Acceptdetails()
+    //    {
+    //        length = 4.5;
+    //        width = 3.5;
+    //    }
+    //    public double GetArea()
+    //    {
+    //        return length * width;
+    //    }
+    //    public void Display()
+    //    {
+    //        Console.WriteLine("Length: {0}", length);
+    //        Console.WriteLine("Width: {0}", width);
+    //        Console.WriteLine("Area: {0}", GetArea());
+    //    }
+    //}
+
+
+}
 
 
 
