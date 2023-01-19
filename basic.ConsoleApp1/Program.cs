@@ -198,7 +198,6 @@ namespace basic.ConsoleApp1
 
             
       
-
         }
 
 
