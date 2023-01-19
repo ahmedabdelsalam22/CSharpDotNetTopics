@@ -247,6 +247,15 @@ namespace basic.ConsoleApp1
                 book_id = id;
             }
 
+
+            public void display()
+            {
+                Console.WriteLine("Title : {0}", title);
+                Console.WriteLine("Author : {0}", author);
+                Console.WriteLine("Subject : {0}", subject);
+                Console.WriteLine("Book_id :{0}", book_id);
+            }
+
         }
 
 
