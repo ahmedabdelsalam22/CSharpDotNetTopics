@@ -557,6 +557,14 @@ namespace basic.ConsoleApp1
 
             //Console.WriteLine("Variable num: {0}", StaticVar.getNum());
 
+            Rectangle Rect = new Rectangle();
+
+            Rect.setWidth(5);
+            Rect.setHeight(7);
+
+            // Print the area of the object.
+            Console.WriteLine("Total area: {0}", Rect.getArea());
+
         }
 
     }
