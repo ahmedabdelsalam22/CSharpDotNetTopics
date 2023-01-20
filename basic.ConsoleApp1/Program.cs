@@ -578,6 +578,13 @@ namespace basic.ConsoleApp1
 
     }
 
+    // Derived class
+
+    class Rectangle : Shape
+    {
+
+    }
+
 
     //class StaticVar
     //{
