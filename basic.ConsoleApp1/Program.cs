@@ -562,7 +562,12 @@ namespace basic.ConsoleApp1
     }
 
 
-    class Shape { }
+    class Shape {
+
+        protected int width;
+        protected int height;
+
+    }
 
 
     //class StaticVar
