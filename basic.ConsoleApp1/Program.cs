@@ -570,7 +570,10 @@ namespace basic.ConsoleApp1
     }
 
 
+    class Shape {
 
+        protected int width;
+        protected int height;
 
         public void setWidth(int w)
         {
@@ -583,11 +586,13 @@ namespace basic.ConsoleApp1
 
     }
 
+    // Derived class
 
     class Rectangle : Shape
     {
         public int getArea()
         {
+            return (width * height);
         }
     }
 
