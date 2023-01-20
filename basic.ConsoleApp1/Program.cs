@@ -569,36 +569,111 @@ namespace basic.ConsoleApp1
             //t.Display();
 
 
-            Rectangle Rect = new Rectangle();
-            int area;
+            //Rectangle Rect = new Rectangle();
+            //int area;
 
-            Rect.setWidth(5);
-            Rect.setHeight(7);
-            area = Rect.getArea();
+            //Rect.setWidth(5);
+            //Rect.setHeight(7);
+            //area = Rect.getArea();
 
+            //// Print the area of the object.
+            //Console.WriteLine("Total area: {0}", Rect.getArea());
+            //Console.WriteLine("Total paint cost: ${0}", Rect.getCost(area));
+
+            //Printdata p = new Printdata();
+
+            //// Call print to print integer
+            //p.print(5);
+
+            //// Call print to print float
+            //p.print(500.263);
+
+            //// Call print to print string
+            //p.print("Hello C++");
+
+            Rectangle r = new Rectangle(10, 7);
+            double a = r.area();
+            Console.WriteLine("Area: {0}", a);
 
         }
 
     }
 
 
-    // Base class PaintCost
-    public interface PaintCost
+    abstract class Shape
     {
-        int getCost(int area);
+        public abstract int area();
     }
 
-    class Rectangle : Shape, PaintCost
+    class Rectangle : Shape
     {
+        private int length;
+        private int width;
 
-        }
-
-        public int getCost(int area)
+        public Rectangle(int a = 0, int b = 0)
         {
-            return area * 70;
+            length = a;
+            width = b;
         }
 
+        public override int area()
+        {
+            Console.WriteLine("Rectangle class area :");
+            return (length*width);
+        }
     }
+
+    //class Printdata
+    //{
+    //    public void print(int i)
+    //    {
+    //        Console.WriteLine("Printing int: {0}", i);
+    //    }
+    //    public void print(double f)
+    //    {
+    //        Console.WriteLine("Printing float: {0}", f);
+    //    }
+    //    public void print(string s)
+    //    {
+    //        Console.WriteLine("Printing string: {0}", s);
+    //    }
+    //}
+
+
+    //class Shape
+    //{
+    //    public void setWidth(int w)
+    //    {
+    //        width = w;
+    //    }
+    //    public void setHeight(int h)
+    //    {
+    //        height = h;
+    //    }
+    //    protected int width;
+    //    protected int height;
+    //}
+
+    //// Base class PaintCost
+    //public interface PaintCost
+    //{
+    //    int getCost(int area);
+    //}
+
+    //class Rectangle : Shape, PaintCost
+    //{
+
+    //    public int getArea()
+    //    {
+    //        return (width * height);
+    //    }
+
+    //    public int getCost(int area)
+    //    {
+    //        return area * 70;
+    //    }
+
+    //}
 
 
     //class Rectangle
