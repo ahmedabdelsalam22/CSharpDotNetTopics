@@ -557,44 +557,96 @@ namespace basic.ConsoleApp1
 
             //Console.WriteLine("Variable num: {0}", StaticVar.getNum());
 
-            Rectangle Rect = new Rectangle();
+            //Rectangle Rect = new Rectangle();
 
-            Rect.setWidth(5);
-            Rect.setHeight(7);
+            //Rect.setWidth(5);
+            //Rect.setHeight(7);
 
-            // Print the area of the object.
-            Console.WriteLine("Total area: {0}", Rect.getArea());
+            //// Print the area of the object.
+            //Console.WriteLine("Total area: {0}", Rect.getArea());
+
+            Tabletop t = new Tabletop(4.5, 7.5);
+            t.Display();
 
         }
 
     }
 
 
-    class Shape {
+    class Rectangle
+    {
 
-        protected int width;
-        protected int height;
+        //member variables
+        protected double length;
+        protected double width;
 
-        public void setWidth(int w)
+        public Rectangle(double l, double w)
         {
+            length = l;
             width = w;
         }
-        public void setHeight(int h)
+        public double GetArea()
         {
-            height = h;
+            return length * width;
         }
-
+        public void Display()
+        {
+            Console.WriteLine("Length: {0}", length);
+            Console.WriteLine("Width: {0}", width);
+            Console.WriteLine("Area: {0}", GetArea());
+        }
     }
 
-    // Derived class
 
-    class Rectangle : Shape
+    class Tabletop : Rectangle
     {
-        public int getArea()
+        public Tabletop(double l, double w) : base(l, w)
         {
-            return (width * height);
+
         }
+
+        public double GetCost()
+        {
+            double cost;
+            cost = GetArea() * 70;
+            return cost;
+        }
+
+        public void Display()
+        {
+            base.Display();
+            Console.WriteLine("Cost: {0}", GetCost());
+        }
+
     }
+
+
+
+    //class Shape {
+
+    //    protected int width;
+    //    protected int height;
+
+    //    public void setWidth(int w)
+    //    {
+    //        width = w;
+    //    }
+    //    public void setHeight(int h)
+    //    {
+    //        height = h;
+    //    }
+
+    //}
+
+    //// Derived class
+
+    //class Rectangle : Shape
+    //{
+    //    public int getArea()
+    //    {
+    //        return (width * height);
+    //    }
+    //}
 
 
     //class StaticVar
