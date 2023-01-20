@@ -580,9 +580,15 @@ namespace basic.ConsoleApp1
             Console.WriteLine("Total area: {0}", Rect.getArea());
             Console.WriteLine("Total paint cost: ${0}", Rect.getCost(area));
 
+        }
 
     }
 
+    class Shape
+    {
+        public void setWidth(int w)
+        {
+            width = w;
         }
         public void setHeight(int h)
         {
