@@ -570,10 +570,7 @@ namespace basic.ConsoleApp1
     }
 
 
-    class Shape {
 
-        protected int width;
-        protected int height;
 
         public void setWidth(int w)
         {
