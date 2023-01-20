@@ -576,9 +576,6 @@ namespace basic.ConsoleApp1
             Rect.setHeight(7);
             area = Rect.getArea();
 
-            // Print the area of the object.
-            Console.WriteLine("Total area: {0}", Rect.getArea());
-            Console.WriteLine("Total paint cost: ${0}", Rect.getCost(area));
 
         }
 
@@ -594,9 +591,6 @@ namespace basic.ConsoleApp1
     class Rectangle : Shape, PaintCost
     {
 
-        public int getArea()
-        {
-            return (width * height);
         }
 
         public int getCost(int area)
