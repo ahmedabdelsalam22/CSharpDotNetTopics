@@ -582,7 +582,10 @@ namespace basic.ConsoleApp1
 
     class Rectangle : Shape
     {
-
+        public int getArea()
+        {
+            return (width * height);
+        }
     }
 
 
