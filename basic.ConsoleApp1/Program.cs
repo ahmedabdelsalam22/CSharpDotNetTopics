@@ -583,13 +583,11 @@ namespace basic.ConsoleApp1
 
     }
 
-    // Derived class
 
     class Rectangle : Shape
     {
         public int getArea()
         {
-            return (width * height);
         }
     }
 
