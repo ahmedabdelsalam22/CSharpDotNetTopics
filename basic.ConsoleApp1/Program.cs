@@ -573,17 +573,7 @@ namespace basic.ConsoleApp1
     }
 
 
-    class Rectangle
-    {
 
-        //member variables
-        protected double length;
-        protected double width;
-
-        public Rectangle(double l, double w)
-        {
-            length = l;
-            width = w;
         }
         public double GetArea()
         {
