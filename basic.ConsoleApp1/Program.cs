@@ -562,6 +562,8 @@ namespace basic.ConsoleApp1
     }
 
 
+    class Shape { }
+
 
     //class StaticVar
     //{
