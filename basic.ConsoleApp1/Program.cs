@@ -565,60 +565,107 @@ namespace basic.ConsoleApp1
             //// Print the area of the object.
             //Console.WriteLine("Total area: {0}", Rect.getArea());
 
-            Tabletop t = new Tabletop(4.5, 7.5);
-            t.Display();
+            //Tabletop t = new Tabletop(4.5, 7.5);
+            //t.Display();
+
+
+            Rectangle Rect = new Rectangle();
+            int area;
+
+            Rect.setWidth(5);
+            Rect.setHeight(7);
+            area = Rect.getArea();
+
+            // Print the area of the object.
+            Console.WriteLine("Total area: {0}", Rect.getArea());
+            Console.WriteLine("Total paint cost: ${0}", Rect.getCost(area));
 
         }
 
     }
 
-
-    class Rectangle
+    class Shape
     {
-
-        //member variables
-        protected double length;
-        protected double width;
-
-        public Rectangle(double l, double w)
+        public void setWidth(int w)
         {
-            length = l;
             width = w;
         }
-        public double GetArea()
+        public void setHeight(int h)
         {
-            return length * width;
+            height = h;
         }
-        public void Display()
-        {
-            Console.WriteLine("Length: {0}", length);
-            Console.WriteLine("Width: {0}", width);
-            Console.WriteLine("Area: {0}", GetArea());
-        }
+        protected int width;
+        protected int height;
     }
 
-
-    class Tabletop : Rectangle
+    // Base class PaintCost
+    public interface PaintCost
     {
-        public Tabletop(double l, double w) : base(l, w)
-        {
+        int getCost(int area);
+    }
 
+    class Rectangle : Shape, PaintCost
+    {
+
+        public int getArea()
+        {
+            return (width * height);
         }
 
-        public double GetCost()
+        public int getCost(int area)
         {
-            double cost;
-            cost = GetArea() * 70;
-            return cost;
-        }
-
-        public void Display()
-        {
-            base.Display();
-            Console.WriteLine("Cost: {0}", GetCost());
+            return area * 70;
         }
 
     }
+
+
+    //class Rectangle
+    //{
+
+    //    //member variables
+    //    protected double length;
+    //    protected double width;
+
+    //    public Rectangle(double l, double w)
+    //    {
+    //        length = l;
+    //        width = w;
+    //    }
+    //    public double GetArea()
+    //    {
+    //        return length * width;
+    //    }
+    //    public void Display()
+    //    {
+    //        Console.WriteLine("Length: {0}", length);
+    //        Console.WriteLine("Width: {0}", width);
+    //        Console.WriteLine("Area: {0}", GetArea());
+    //    }
+    //}
+
+
+    //class Tabletop : Rectangle
+    //{
+    //    public Tabletop(double l, double w) : base(l, w)
+    //    {
+
+    //    }
+
+    //    public double GetCost()
+    //    {
+    //        double cost;
+    //        cost = GetArea() * 70;
+    //        return cost;
+    //    }
+
+    //    public void Display()
+    //    {
+    //        base.Display();
+    //        Console.WriteLine("Cost: {0}", GetCost());
+    //    }
+
+    //}
 
 
 
