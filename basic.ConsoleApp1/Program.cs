@@ -613,7 +613,6 @@ namespace basic.ConsoleApp1
 
 
         }
-    }
 
     class Triangle : Shape
     {
@@ -626,13 +625,6 @@ namespace basic.ConsoleApp1
             return (width * height / 2);
         }
 
-    class Caller
-    {
-        public void CallArea(Shape sh)
-        {
-            int a;
-            a = sh.area();
-            Console.WriteLine("Area: {0}", a);
         }
     }
 
