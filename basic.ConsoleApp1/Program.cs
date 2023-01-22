@@ -612,10 +612,6 @@ namespace basic.ConsoleApp1
 
 
 
-        public override int area()
-        {
-            Console.WriteLine("Rectangle class area :");
-            return (width * height);
         }
     }
 
