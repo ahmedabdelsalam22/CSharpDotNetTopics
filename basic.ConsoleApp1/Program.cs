@@ -629,7 +629,6 @@ namespace basic.ConsoleApp1
             Console.WriteLine("Triangle class area :");
             return (width * height / 2);
         }
-    }
 
     class Caller
     {
