@@ -1,6 +1,7 @@
 ﻿
 
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.Reflection.Metadata;
 using System.Transactions;
 using System.Xml.Linq;
@@ -595,244 +596,76 @@ namespace basic.ConsoleApp1
             //double a = r.area();
             //Console.WriteLine("Area: {0}", a);
 
-            Caller c = new Caller();
-            Rectangle r = new Rectangle(10, 7);
-            Triangle t = new Triangle(10, 5);
+            //Caller c = new Caller();
+            //Rectangle r = new Rectangle(10, 7);
+            //Triangle t = new Triangle(10, 5);
 
-            c.CallArea(r);
-            c.CallArea(t);
+            //c.CallArea(r);
+            //c.CallArea(t);
 
+            // // Operator Overloading
+
+
+            Dollar dollar = new Dollar(99);
+
+            Console.WriteLine(dollar.Amount);
 
         }
 
     }
 
 
-
-
-
-
-        }
-
-    class Triangle : Shape
+    class Dollar 
     {
-        public Triangle(int a = 0, int b = 0) : base(a, b)
+
+        private decimal _amount;
+
+        public Dollar(decimal amount) 
         {
-        }
-        public override int area()
-        {
-            Console.WriteLine("Triangle class area :");
-            return (width * height / 2);
+            Validation(amount);
         }
 
+
+        public decimal Amount 
+        {
+            get 
+            {
+                return _amount; 
+            }
+
+            set 
+            {
+                Validation(value);
+            }
         }
+
+        public void Validation(decimal value)
+        {
+            if (value < 0)
+            {
+                this._amount = 0;
+            }
+            else
+            {
+                this._amount = value;
+            }
+        }
+
+        
+    
     }
 
-
-    //abstract class Shape
-    //{
-    //    public abstract int area();
-    //}
-
-    //class Rectangle : Shape
-    //{
-    //    private int length;
-    //    private int width;
-
-    //    public Rectangle(int a = 0, int b = 0)
-    //    {
-    //        length = a;
-    //        width = b;
-    //    }
-
-    //    public override int area()
-    //    {
-    //        Console.WriteLine("Rectangle class area :");
-    //        return (length*width);
-    //    }
-    //}
-
-    //class Printdata
-    //{
-    //    public void print(int i)
-    //    {
-    //        Console.WriteLine("Printing int: {0}", i);
-    //    }
-    //    public void print(double f)
-    //    {
-    //        Console.WriteLine("Printing float: {0}", f);
-    //    }
-    //    public void print(string s)
-    //    {
-    //        Console.WriteLine("Printing string: {0}", s);
-    //    }
-    //}
-
-
-    //class Shape
-    //{
-    //    public void setWidth(int w)
-    //    {
-    //        width = w;
-    //    }
-    //    public void setHeight(int h)
-    //    {
-    //        height = h;
-    //    }
-    //    protected int width;
-    //    protected int height;
-    //}
-
-    //// Base class PaintCost
-    //public interface PaintCost
-    //{
-    //    int getCost(int area);
-    //}
-
-    //class Rectangle : Shape, PaintCost
-    //{
-
-    //    public int getArea()
-    //    {
-    //        return (width * height);
-    //    }
-
-    //    public int getCost(int area)
-    //    {
-    //        return area * 70;
-    //    }
-
-    //}
-
-
-    //class Rectangle
-    //{
-
-    //    //member variables
-    //    protected double length;
-    //    protected double width;
-
-    //    public Rectangle(double l, double w)
-    //    {
-    //        length = l;
-    //        width = w;
-    //    }
-    //    public double GetArea()
-    //    {
-    //        return length * width;
-    //    }
-    //    public void Display()
-    //    {
-    //        Console.WriteLine("Length: {0}", length);
-    //        Console.WriteLine("Width: {0}", width);
-    //        Console.WriteLine("Area: {0}", GetArea());
-    //    }
-    //}
-
-
-    //class Tabletop : Rectangle
-    //{
-    //    public Tabletop(double l, double w) : base(l, w)
-    //    {
-
-    //    }
-
-    //    public double GetCost()
-    //    {
-    //        double cost;
-    //        cost = GetArea() * 70;
-    //        return cost;
-    //    }
-
-    //    public void Display()
-    //    {
-    //        base.Display();
-    //        Console.WriteLine("Cost: {0}", GetCost());
-    //    }
-
-    //}
-
-
-
-    //class Shape {
-
-    //    protected int width;
-    //    protected int height;
-
-    //    public void setWidth(int w)
-    //    {
-    //        width = w;
-    //    }
-    //    public void setHeight(int h)
-    //    {
-    //        height = h;
-    //    }
-
-    //}
-
-    //// Derived class
-
-    //class Rectangle : Shape
-    //{
-    //    public int getArea()
-    //    {
-    //        return (width * height);
-    //    }
-    //}
-
-
-    //class StaticVar
-    //{
-    //    public static int num;
-
-    //    public void count()
-    //    {
-    //        num++;
-    //    }
-    //    public static int getNum()
-    //    {
-    //        return num;
-    //    }
-    //}
-
-    //class Line
-    //{
-    //    private double length;
-
-    //    public Line()
-    //    {
-    //        Console.WriteLine("Object is being created");
-    //    }
-
-    //    //public Line(double len)
-    //    //{  //Parameterized constructor
-    //    //    Console.WriteLine("Object is being created, length = {0}", len);
-    //    //    length = len;
-    //    //}
-
-    //    ~Line()
-    //    {   //destructor
-    //        Console.WriteLine("Object is being deleted");
-    //    }
-
-    //    public void setLength(double len)
-    //    {
-    //        length = len;
-    //    }
-
-    //    public double getLength()
-    //    {
-    //        return length;
-    //    }
-
-    //}
 
     //class Box
     //{
-    //    public double length;   // Length of a box
-    //    public double breadth;  // Breadth of a box
-    //    public double height;   // Height of a box
+    //    private double length;   // Length of a box
+    //    private double breadth;  // Breadth of a box
+    //    private double height;   // Height of a box
 
+    //    public double getVolume()
+    //    {
+    //        return length * breadth * height;
+    //    }
     //    public void setLength(double len)
     //    {
     //        length = len;
@@ -846,115 +679,397 @@ namespace basic.ConsoleApp1
     //        height = hei;
     //    }
 
-    //    public double getVolume()
+    //    // Overload + operator to add two Box objects.
+    //    public static Box operator +(Box b, Box c)
     //    {
-    //        return length * breadth * height;
+    //        Box box = new Box();
+    //        box.length = b.length + c.length;
+    //        box.breadth = b.breadth + c.breadth;
+    //        box.height = b.height + c.height;
+    //        return box;
     //    }
 
     //}
 
 
-    //enum Days { Sun, Mon, tue, Wed, thu, Fri, Sat };
+        //class Shape
+        //{
+        //    protected int width, height;
+
+        //    public Shape(int a = 0, int b = 0)
+        //    {
+        //        width = a;
+        //        height = b;
+        //    }
+        //    public virtual int area()
+        //    {
+        //        Console.WriteLine("Parent class area :");
+        //        return 0;
+        //    }
+        //}
+
+        //class Rectangle : Shape
+        //{
+
+        //    public Rectangle(int a = 0, int b = 0) : base(a, b){}
+
+
+        //    public override int area()
+        //    {
+        //        Console.WriteLine("Rectangle class area :");
+        //        return (width * height);
+        //    }
+        //}
+
+        //class Triangle : Shape
+        //{
+        //    public Triangle(int a = 0, int b = 0) : base(a, b)
+        //    {
+        //    }
+        //    public override int area()
+        //    {
+        //        Console.WriteLine("Triangle class area :");
+        //        return (width * height / 2);
+        //    }
+        //}
+
+        //class Caller
+        //{
+        //    public void CallArea(Shape sh)
+        //    {
+        //        int a;
+        //        a = sh.area();
+        //        Console.WriteLine("Area: {0}", a);
+        //    }
+        //}
+
+
+        //abstract class Shape
+        //{
+        //    public abstract int area();
+        //}
+
+        //class Rectangle : Shape
+        //{
+        //    private int length;
+        //    private int width;
+
+        //    public Rectangle(int a = 0, int b = 0)
+        //    {
+        //        length = a;
+        //        width = b;
+        //    }
+
+        //    public override int area()
+        //    {
+        //        Console.WriteLine("Rectangle class area :");
+        //        return (length*width);
+        //    }
+        //}
+
+        //class Printdata
+        //{
+        //    public void print(int i)
+        //    {
+        //        Console.WriteLine("Printing int: {0}", i);
+        //    }
+        //    public void print(double f)
+        //    {
+        //        Console.WriteLine("Printing float: {0}", f);
+        //    }
+        //    public void print(string s)
+        //    {
+        //        Console.WriteLine("Printing string: {0}", s);
+        //    }
+        //}
+
+
+        //class Shape
+        //{
+        //    public void setWidth(int w)
+        //    {
+        //        width = w;
+        //    }
+        //    public void setHeight(int h)
+        //    {
+        //        height = h;
+        //    }
+        //    protected int width;
+        //    protected int height;
+        //}
+
+        //// Base class PaintCost
+        //public interface PaintCost
+        //{
+        //    int getCost(int area);
+        //}
+
+        //class Rectangle : Shape, PaintCost
+        //{
+
+        //    public int getArea()
+        //    {
+        //        return (width * height);
+        //    }
+
+        //    public int getCost(int area)
+        //    {
+        //        return area * 70;
+        //    }
+
+        //}
+
+
+        //class Rectangle
+        //{
+
+        //    //member variables
+        //    protected double length;
+        //    protected double width;
+
+        //    public Rectangle(double l, double w)
+        //    {
+        //        length = l;
+        //        width = w;
+        //    }
+        //    public double GetArea()
+        //    {
+        //        return length * width;
+        //    }
+        //    public void Display()
+        //    {
+        //        Console.WriteLine("Length: {0}", length);
+        //        Console.WriteLine("Width: {0}", width);
+        //        Console.WriteLine("Area: {0}", GetArea());
+        //    }
+        //}
+
+
+        //class Tabletop : Rectangle
+        //{
+        //    public Tabletop(double l, double w) : base(l, w)
+        //    {
+
+        //    }
+
+        //    public double GetCost()
+        //    {
+        //        double cost;
+        //        cost = GetArea() * 70;
+        //        return cost;
+        //    }
+
+        //    public void Display()
+        //    {
+        //        base.Display();
+        //        Console.WriteLine("Cost: {0}", GetCost());
+        //    }
+
+        //}
+
+
+
+        //class Shape {
+
+        //    protected int width;
+        //    protected int height;
+
+        //    public void setWidth(int w)
+        //    {
+        //        width = w;
+        //    }
+        //    public void setHeight(int h)
+        //    {
+        //        height = h;
+        //    }
+
+        //}
+
+        //// Derived class
+
+        //class Rectangle : Shape
+        //{
+        //    public int getArea()
+        //    {
+        //        return (width * height);
+        //    }
+        //}
+
+
+        //class StaticVar
+        //{
+        //    public static int num;
+
+        //    public void count()
+        //    {
+        //        num++;
+        //    }
+        //    public static int getNum()
+        //    {
+        //        return num;
+        //    }
+        //}
+
+        //class Line
+        //{
+        //    private double length;
+
+        //    public Line()
+        //    {
+        //        Console.WriteLine("Object is being created");
+        //    }
+
+        //    //public Line(double len)
+        //    //{  //Parameterized constructor
+        //    //    Console.WriteLine("Object is being created, length = {0}", len);
+        //    //    length = len;
+        //    //}
+
+        //    ~Line()
+        //    {   //destructor
+        //        Console.WriteLine("Object is being deleted");
+        //    }
+
+        //    public void setLength(double len)
+        //    {
+        //        length = len;
+        //    }
+
+        //    public double getLength()
+        //    {
+        //        return length;
+        //    }
+
+        //}
+
+        //class Box
+        //{
+        //    public double length;   // Length of a box
+        //    public double breadth;  // Breadth of a box
+        //    public double height;   // Height of a box
+
+        //    public void setLength(double len)
+        //    {
+        //        length = len;
+        //    }
+        //    public void setBreadth(double bre)
+        //    {
+        //        breadth = bre;
+        //    }
+        //    public void setHeight(double hei)
+        //    {
+        //        height = hei;
+        //    }
+
+        //    public double getVolume()
+        //    {
+        //        return length * breadth * height;
+        //    }
+
+        //}
+
+
+        //enum Days { Sun, Mon, tue, Wed, thu, Fri, Sat };
 
 
 
 
 
-    // struct 
+        // struct 
 
-    //struct Books {
+        //struct Books {
 
-    //    public string title;
-    //    public string author;
-    //    public string subject;
-    //    public int book_id;
-
-
-    //    public void getValues(string t, string a, string s, int id)
-    //    {
-    //        title = t;
-    //        author = a;
-    //        subject = s;
-    //        book_id = id;
-    //    }
+        //    public string title;
+        //    public string author;
+        //    public string subject;
+        //    public int book_id;
 
 
-    //    public void display()
-    //    {
-    //        Console.WriteLine("Title : {0}", title);
-    //        Console.WriteLine("Author : {0}", author);
-    //        Console.WriteLine("Subject : {0}", subject);
-    //        Console.WriteLine("Book_id :{0}", book_id);
-    //    }
-
-    //}
+        //    public void getValues(string t, string a, string s, int id)
+        //    {
+        //        title = t;
+        //        author = a;
+        //        subject = s;
+        //        book_id = id;
+        //    }
 
 
+        //    public void display()
+        //    {
+        //        Console.WriteLine("Title : {0}", title);
+        //        Console.WriteLine("Author : {0}", author);
+        //        Console.WriteLine("Subject : {0}", subject);
+        //        Console.WriteLine("Book_id :{0}", book_id);
+        //    }
 
-
-
-    //// public access Specifier
-    //class Rectangle {
-    //    public double length;
-    //    public double width;
-
-    //    public double getArea() {
-    //        return length * width;
-    //    } 
-    //}
+        //}
 
 
 
 
-    //class Rectangle
-    //{
 
-    //    private double length;
-    //    private double width;
+        //// public access Specifier
+        //class Rectangle {
+        //    public double length;
+        //    public double width;
 
-    //    public void getArea()
-    //    {
-    //        Console.WriteLine("Enter Rectangle Length");
-    //        length = Convert.ToDouble(Console.ReadLine());
-    //        Console.WriteLine("Enter Rectangle Width");
-    //        width = Convert.ToDouble(Console.ReadLine());
-
-    //        double area = length * width;
-    //        Console.WriteLine("Rectanlge area is equal " + area);
-    //    }
-
-
-    //}
+        //    public double getArea() {
+        //        return length * width;
+        //    } 
+        //}
 
 
 
-    //class Rectangle
-    //{
 
-    //    // member variables
-    //    double length;
-    //    double width;
+        //class Rectangle
+        //{
 
-    //    // evaluation length and width
-    //    public void Acceptdetails()
-    //    {
-    //        length = 4.5;
-    //        width = 3.5;
-    //    }
-    //    public double GetArea()
-    //    {
-    //        return length * width;
-    //    }
-    //    public void Display()
-    //    {
-    //        Console.WriteLine("Length: {0}", length);
-    //        Console.WriteLine("Width: {0}", width);
-    //        Console.WriteLine("Area: {0}", GetArea());
-    //    }
-    //}
+        //    private double length;
+        //    private double width;
+
+        //    public void getArea()
+        //    {
+        //        Console.WriteLine("Enter Rectangle Length");
+        //        length = Convert.ToDouble(Console.ReadLine());
+        //        Console.WriteLine("Enter Rectangle Width");
+        //        width = Convert.ToDouble(Console.ReadLine());
+
+        //        double area = length * width;
+        //        Console.WriteLine("Rectanlge area is equal " + area);
+        //    }
 
 
-}
+        //}
+
+
+
+        //class Rectangle
+        //{
+
+        //    // member variables
+        //    double length;
+        //    double width;
+
+        //    // evaluation length and width
+        //    public void Acceptdetails()
+        //    {
+        //        length = 4.5;
+        //        width = 3.5;
+        //    }
+        //    public double GetArea()
+        //    {
+        //        return length * width;
+        //    }
+        //    public void Display()
+        //    {
+        //        Console.WriteLine("Length: {0}", length);
+        //        Console.WriteLine("Width: {0}", width);
+        //        Console.WriteLine("Area: {0}", GetArea());
+        //    }
+        //}
+
+
+    }
 
 
 
