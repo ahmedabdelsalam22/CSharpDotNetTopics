@@ -607,26 +607,9 @@ namespace basic.ConsoleApp1
 
     }
 
-    class Shape
-    {
-        protected int width, height;
 
-        public Shape(int a = 0, int b = 0)
-        {
-            width = a;
-            height = b;
-        }
-        public virtual int area()
-        {
-            Console.WriteLine("Parent class area :");
-            return 0;
-        }
-    }
 
-    class Rectangle : Shape
-    {
 
-        public Rectangle(int a = 0, int b = 0) : base(a, b){}
 
 
         public override int area()
