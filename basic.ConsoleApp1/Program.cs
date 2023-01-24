@@ -606,7 +606,8 @@ namespace basic.ConsoleApp1
             // // Operator Overloading
 
 
-            Dollar dollar = new Dollar(99);
+            Dollar dollar = new Dollar(90);
+            dollar.Amount = 90;
 
             Console.WriteLine(dollar.Amount);
 
@@ -615,25 +616,25 @@ namespace basic.ConsoleApp1
     }
 
 
-    class Dollar 
+    class Dollar
     {
 
         private decimal _amount;
 
-        public Dollar(decimal amount) 
+        public Dollar(decimal amount)
         {
             Validation(amount);
         }
 
 
-        public decimal Amount 
+        public decimal Amount
         {
-            get 
+            get
             {
-                return _amount; 
+                return _amount;
             }
 
-            set 
+            set
             {
                 Validation(value);
             }
@@ -651,45 +652,45 @@ namespace basic.ConsoleApp1
             }
         }
 
-        
-    
-    }
 
 
-    //class Box
-    //{
-    //    private double length;   // Length of a box
-    //    private double breadth;  // Breadth of a box
-    //    private double height;   // Height of a box
+        //}
 
-    //    public double getVolume()
-    //    {
-    //        return length * breadth * height;
-    //    }
-    //    public void setLength(double len)
-    //    {
-    //        length = len;
-    //    }
-    //    public void setBreadth(double bre)
-    //    {
-    //        breadth = bre;
-    //    }
-    //    public void setHeight(double hei)
-    //    {
-    //        height = hei;
-    //    }
 
-    //    // Overload + operator to add two Box objects.
-    //    public static Box operator +(Box b, Box c)
-    //    {
-    //        Box box = new Box();
-    //        box.length = b.length + c.length;
-    //        box.breadth = b.breadth + c.breadth;
-    //        box.height = b.height + c.height;
-    //        return box;
-    //    }
+        //class Box
+        //{
+        //    private double length;   // Length of a box
+        //    private double breadth;  // Breadth of a box
+        //    private double height;   // Height of a box
 
-    //}
+        //    public double getVolume()
+        //    {
+        //        return length * breadth * height;
+        //    }
+        //    public void setLength(double len)
+        //    {
+        //        length = len;
+        //    }
+        //    public void setBreadth(double bre)
+        //    {
+        //        breadth = bre;
+        //    }
+        //    public void setHeight(double hei)
+        //    {
+        //        height = hei;
+        //    }
+
+        //    // Overload + operator to add two Box objects.
+        //    public static Box operator +(Box b, Box c)
+        //    {
+        //        Box box = new Box();
+        //        box.length = b.length + c.length;
+        //        box.breadth = b.breadth + c.breadth;
+        //        box.height = b.height + c.height;
+        //        return box;
+        //    }
+
+        //}
 
 
         //class Shape
