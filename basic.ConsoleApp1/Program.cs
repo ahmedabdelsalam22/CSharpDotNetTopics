@@ -606,51 +606,51 @@ namespace basic.ConsoleApp1
             // // Operator Overloading
 
 
-            Dollar dollar = new Dollar(90);
-            dollar.Amount = 90;
+            //Dollar dollar = new Dollar(90);
+            //dollar.Amount = 90;
 
-            Console.WriteLine(dollar.Amount);
+            //Console.WriteLine(dollar.Amount);
 
         }
 
     }
 
 
-    class Dollar
-    {
+    //class Dollar
+    //{
 
-        private decimal _amount;
+    //    private decimal _amount;
 
-        public Dollar(decimal amount)
-        {
-            Validation(amount);
-        }
+    //    public Dollar(decimal amount)
+    //    {
+    //        Validation(amount);
+    //    }
 
 
-        public decimal Amount
-        {
-            get
-            {
-                return _amount;
-            }
+    //    public decimal Amount
+    //    {
+    //        get
+    //        {
+    //            return _amount;
+    //        }
 
-            set
-            {
-                Validation(value);
-            }
-        }
+    //        set
+    //        {
+    //            Validation(value);
+    //        }
+    //    }
 
-        public void Validation(decimal value)
-        {
-            if (value < 0)
-            {
-                this._amount = 0;
-            }
-            else
-            {
-                this._amount = value;
-            }
-        }
+    //    public void Validation(decimal value)
+    //    {
+    //        if (value < 0)
+    //        {
+    //            this._amount = 0;
+    //        }
+    //        else
+    //        {
+    //            this._amount = value;
+    //        }
+    //    }
 
 
 
