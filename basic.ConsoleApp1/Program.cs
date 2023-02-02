@@ -611,8 +611,21 @@ namespace basic.ConsoleApp1
 
             //Console.WriteLine(dollar.Amount);
 
+            String str1 = "5464";
+
+            int val = str1.ConvertStringToInteger();
+
+            Console.WriteLine(val);
         }
 
+    }
+
+    public static class Demo 
+    {
+       public static int ConvertStringToInteger( this string str) 
+        {
+          return int.Parse(str);    
+        }
     }
 
 
